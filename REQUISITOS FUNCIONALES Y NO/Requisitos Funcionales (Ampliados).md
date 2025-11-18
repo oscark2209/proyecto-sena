@@ -2,41 +2,41 @@
 
 ---
 
-##  RF-00: GESTIÓN DE INVENTARIO
+## RF-00: GESTIÓN DE INVENTARIO
 
-### **RF-00.0: Consulta y Búsqueda de Inventario**
+### RF-00.0: Consulta y Búsqueda de Inventario
 
 El sistema debe permitir consultar y buscar productos en inventario usando filtros (categoría, ubicación, lote, fecha de vencimiento) o mediante código de barras, SKU o nombre, mostrando niveles actuales, mínimos y máximos de stock.
 
-### **RF-00.1: Registro y Trazabilidad de Movimientos**
+### RF-00.1: Registro y Trazabilidad de Movimientos
 
 El sistema debe registrar automáticamente entradas y salidas de inventario, validando transacciones contra pedidos y órdenes de compra, manteniendo trazabilidad completa de todos los movimientos.
 
-### **RF-00.2: Ajustes y Control de Descuadres**
+### RF-00.2: Ajustes y Control de Descuadres
 
 El sistema debe permitir ajustes manuales de inventario con justificación y aprobación por niveles jerárquicos, detectar automáticamente discrepancias y generar informes de diferencias con registro de causas y responsables.
 
 ---
 
-## **RF-01: GESTIÓN DE PROVEEDORES**
+## RF-01: GESTIÓN DE PROVEEDORES
 
-### **RF-01.0: Registro y Administración de Proveedores**
+### RF-01.0: Registro y Administración de Proveedores
 
 El sistema debe permitir registrar, actualizar, clasificar y consultar proveedores con datos completos (razón social, contacto, condiciones comerciales, productos suministrados), manteniendo base de datos centralizada con historial completo.
 
-### **RF-01.1: Evaluación y Ranking de Proveedores**
+### RF-01.1: Evaluación y Ranking de Proveedores
 
 El sistema debe calcular automáticamente indicadores de desempeño (calidad, cumplimiento, precios), generar ranking basado en criterios configurables y mantener historial de evaluaciones con referencias comerciales.
 
-### **RF-01.2: Historial de Interacciones con Proveedores**
+### RF-01.2: Historial de Interacciones con Proveedores
 
 El sistema debe registrar todas las comunicaciones, cotizaciones recibidas, reclamos, acuerdos comerciales, mantener histórico de precios y almacenar documentos relacionados (contratos, certificados).
 
 ---
 
-## **RF-02: GESTIÓN DE COTIZACIONES**
+## RF-02: GESTIÓN DE COTIZACIONES
 
-### **RF-02.0: Solicitud, Comparación y Aprobación de Cotizaciones**
+### RF-02.0: Solicitud, Comparación y Aprobación de Cotizaciones**
 
 El sistema debe permitir enviar solicitudes de cotización a proveedores, registrar cotizaciones recibidas, comparar múltiples opciones por precio y condiciones, aprobar/rechazar con justificación y convertir cotizaciones aprobadas en órdenes de compra.
 
