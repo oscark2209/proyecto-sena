@@ -20,7 +20,7 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 
 [Ir a RF-00 GESTIÓN DE INVENTARIO](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-00-gestión-de-inventario)
 
-[Ir a RF-01 GESTIÓN DE PROVEEDORES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-02-gestión-de-cotizaciones)
+[Ir a RF-01 GESTIÓN DE PROVEEDORES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-01-gestión-de-proveedores)
 
 [Ir a RF-02 GESTIÓN DE COTIZACIONES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-02-gestión-de-cotizaciones)
 
