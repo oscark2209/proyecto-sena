@@ -20,7 +20,7 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 
 Aquí va el acceso directo al requisito:
 
-[Ir a RF-00.0](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-000-consulta-y-busqueda-de-inventario)
+[Ir a RF-00.0: Consulta y Búsqueda de Inventario ](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-000-consulta-y-busqueda-de-inventario)
 
 
 
