@@ -16,5 +16,6 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 | Angelica | Aregpoces Cortes |<img width="90" height="150" alt="image" src="assets/angelica.jpeg"> |
 
 # INDICE DE DOCUMENTACION
-[PROBAR LINK](../REQUISITOS FUNCIONALES Y NO/requisitos%20funcionales%20(ampliados).md)
+[link de prueba](https://google.com)
+
 
