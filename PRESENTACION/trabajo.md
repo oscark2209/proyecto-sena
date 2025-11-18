@@ -30,4 +30,18 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 
 [Ir a RF-05 GESTIÓN DE MATERIAS PRIMAS](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-05-gestión-de-materias-primas)
 
-[Ir a RF-05 SISTEMAS DE ALERTAS Y NOTIFICACIONES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-06-sistema-de-alertas-y-notificaciones)
+[Ir a RF-06 SISTEMAS DE ALERTAS Y NOTIFICACIONES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-06-sistema-de-alertas-y-notificaciones)
+
+[Ir a RF-07 GESTIÓN DE ENTREGAS Y DESPACHOS](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-07-gestión-de-entregas-y-despachos)
+
+[Ir a RF-08 RASTREO Y LOGISTICA](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-08-rastreo-y-logística)
+
+[Ir a RF-09 GESTIÓN DE ALMACENAMIENTO](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-09-gestión-de-almacenamiento)
+
+[Ir a RF-10 REPORTES E INFORMES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-10-reportes-e-informes)
+
+[Ir a RF-11 INTEGRACIONES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-11-integraciones)
+
+[Ir a RF-12 GESTIÓN DE USUARIOS Y SEGURIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-12-gestión-de-usuarios-y-seguridad)
+
+[Ir a RF-12 ATENCIÓN AL CLIENTE](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-13-atención-al-cliente)
