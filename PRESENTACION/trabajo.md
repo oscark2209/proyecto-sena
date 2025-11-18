@@ -28,4 +28,6 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 
 [Ir a RF-04 GESTIÓN DE ORDENES DE COMPRA](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-04-gestión-de-órdenes-de-compra)
 
-[Ir a RF-05 GESTIÓN DE ORDENES DE COMPRA](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-05-gestión-de-materias-primas)
+[Ir a RF-05 GESTIÓN DE MATERIAS PRIMAS](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-05-gestión-de-materias-primas)
+
+[Ir a RF-05 SISTEMAS DE ALERTAS Y NOTIFICACIONES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-06-sistema-de-alertas-y-notificaciones)
