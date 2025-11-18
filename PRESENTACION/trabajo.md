@@ -44,4 +44,4 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 
 [Ir a RF-12 GESTIÓN DE USUARIOS Y SEGURIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-12-gestión-de-usuarios-y-seguridad)
 
-[Ir a RF-12 ATENCIÓN AL CLIENTE](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-13-atención-al-cliente)
+[Ir a RF-13 ATENCIÓN AL CLIENTE](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-13-atención-al-cliente)
