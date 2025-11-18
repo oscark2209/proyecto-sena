@@ -16,11 +16,10 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 | Angelica | Aregpoces Cortes |<img width="90" height="150" alt="image" src="assets/angelica.jpeg"> |
 
 # INDICE DE DOCUMENTACION
-## Sección de Enlaces
+## REQUISITOS FUNCIONALES
 
-Aquí va el acceso directo al requisito:
+[Ir a RF-00: GESTIÓN DE INVENTARIO](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-00-gestion-de-inventarioi)
 
-[Ir a RF-00.0: Consulta y Búsqueda de Inventario ](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-000-consulta-y-busqueda-de-inventario)
-
+[Ir a RF-01: GESTIÓN DE PROVEEDORES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-01-gestion-de-provedores)
 
 
