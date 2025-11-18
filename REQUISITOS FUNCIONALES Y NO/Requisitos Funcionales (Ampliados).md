@@ -2,7 +2,7 @@
 
 ---
 
-##  **RF-00: GESTIÓN DE INVENTARIO**
+##  RF-00: GESTIÓN DE INVENTARIO
 
 ### **RF-00.0: Consulta y Búsqueda de Inventario**
 
