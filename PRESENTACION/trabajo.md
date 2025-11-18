@@ -10,9 +10,9 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 | Nombre | Apellidos | Foto |
 |--------|-----------|------| 
 | Javier Alexander | Sepulveda Burgos |<img width="180" height="150" alt="image" src="assets/javier.jpeg"> |
-| Anders Felipe | Fernandez Cardoza| <img width="150" height="150" alt="image" src="assets/andres.jpeg">
+| Andres Felipe | Fernandez Cardoza| <img width="150" height="150" alt="image" src="assets/andres.jpeg">
 | Oscar David | Ruiz Hernandez |<img width="120" height="150" alt="image" src="assets/OSACAR.jpeg"> |
-| Yaneiris | Vargas Loazano |<img width="110" height="150" alt="image" src="assets/yane.jpeg"> |
+| Yaneiris | Vargas Lozano |<img width="110" height="150" alt="image" src="assets/yane.jpeg"> |
 | Angelica | Arregoces Cortes |<img width="90" height="150" alt="image" src="assets/angelica.jpeg"> |
 
 # INDICE DE DOCUMENTACION
