@@ -32,3 +32,18 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 - [Ir a RF-11 INTEGRACIONES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-11-integraciones)
 - [Ir a RF-12 GESTIÓN DE USUARIOS Y SEGURIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-12-gestión-de-usuarios-y-seguridad)
 - [Ir a RF-13 ATENCIÓN AL CLIENTE](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-13-atención-al-cliente)
+
+## REQUISITOS NO FUNCIONALES
+
+- [Ir a RNF-01 RENDIMIENTO](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-01-rendimiento)
+- [Ir a RNF-02 DISPONIBILIDAD Y CONFIABILIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-02-disponibilidad-y-confiabilidad)
+- [Ir a RNF-03 SEGURIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-03-seguridad)
+- [Ir a RNF-04 USABILIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-04-usabilidad)
+- [Ir a RNF-05 INTEGRABILIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-05-integrabilidad)
+- [Ir a RNF-06 MANTENIBILIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-06-mantenibilidad)
+- [Ir a RNF-07 PORTABILIDAD](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-07-portabilidad)
+- [Ir a RNF-08 EFICIENCIA Y OPTIMIZACIÓN](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-08-eficiencia-y-optimización)
+- [Ir a RNF-09 CUMPLIMIENTO Y NORMATIVAS](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-09-cumplimiento-y-normativas)
+- [Ir a RNF-10 RESTRICCION Y LIMITACIONES](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-10-restricciones-y-limitaciones)
+- [Ir a RNF-11 DOCUMENTACIÓN](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-11-documentación)
+- [Ir a RNF-12 CALIDAD DE DATOS](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20No%20Funcionales%20(ampliados).md#rnf-12-calidad-de-datos)
