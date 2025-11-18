@@ -18,5 +18,6 @@ Buscamos implementar un sistema integral de Gestión de la Cadena de Suministro 
 # INDICE DE DOCUMENTACION
 ## REQUISITOS FUNCIONALES
 
-[Ir a RF-00 gestión de inventarios](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-00-gestion-de-inventario)
+[Ir a RF-00](../REQUISITOS%20FUNCIONALES%20Y%20NO/Requisitos%20Funcionales%20(Ampliados).md#rf-00-gestion-de-inventario)
+
 
