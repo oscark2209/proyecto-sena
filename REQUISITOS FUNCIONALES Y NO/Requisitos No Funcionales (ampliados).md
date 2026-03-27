@@ -1,246 +1,604 @@
-# **Requisitos No Funcionales**
+RNF-001: RENDIMIENTO
+RNF-001.1: Tiempos de Respuesta
 
----
+Descripción:
+El sistema debe garantizar tiempos de respuesta óptimos en todas las operaciones.
 
-## **RNF-01: RENDIMIENTO**
+Actor:
+Sistema
 
-### **RNF-01.0: Tiempos de Respuesta**
+Precondiciones:
 
-* Las consultas de inventario deben ejecutarse de manera instantánea (sub-segundo, \< 1 segundo).  
-* La generación de reportes básicos debe completarse en menos de 3 segundos.  
-* La generación de reportes complejos y dashboards ejecutivos debe completarse en menos de 10 segundos.  
-* Las notificaciones de stock bajo, pedidos urgentes o alertas críticas deben ser inmediatas (tiempo real).
+Sistema en operación normal.
+Conectividad estable.
 
-### **RNF-01.1: Capacidad y Concurrencia**
+Flujo Principal:
 
-* El sistema debe soportar un mínimo de 5 usuarios simultáneos sin degradación del rendimiento.  
-* El sistema debe permitir hasta 20 usuarios concurrentes en operaciones normales.  
-* El sistema debe manejar picos de hasta 50 usuarios simultáneos durante períodos críticos (cierre de mes, inventarios).
+El usuario realiza una solicitud.
+El sistema procesa la solicitud.
+El sistema retorna el resultado al usuario.
 
-### **RNF-01.2: Escalabilidad**
+Criterios de Aceptación:
 
-* El sistema debe ser escalable para soportar crecimiento de hasta 200% en volumen de transacciones sin cambios de arquitectura.  
-* Debe permitir el incremento de capacidad de almacenamiento de datos sin interrupciones del servicio.  
-* Debe soportar la adición de nuevos módulos o funcionalidades sin afectar el rendimiento de los existentes.
+Consultas en menos de 1 segundo.
+Reportes básicos en menos de 3 segundos.
+Reportes complejos en menos de 10 segundos.
+Notificaciones en tiempo real.
 
----
+Prioridad:
+MUST (Crítico)
 
-## **RNF-02: DISPONIBILIDAD Y CONFIABILIDAD**
+RNF-001.2: Capacidad y Concurrencia
 
-### **RNF-02.0: Alta Disponibilidad**
+Descripción:
+El sistema debe soportar múltiples usuarios concurrentes sin degradación del servicio.
 
-* El sistema debe garantizar una disponibilidad del 99.5% mensual (tiempo de inactividad máximo de 3.6 horas/mes).  
-* El sistema debe proporcionar acceso constante a la información de inventario, proveedores y procesos de compra para la toma de decisiones.  
-* El sistema debe implementar mecanismos de recuperación automática ante fallos.
+Actor:
+Sistema
 
-### **RNF-02.1: Respaldo y Recuperación**
+Precondiciones:
 
-* El sistema debe realizar respaldos automáticos diarios de toda la información.  
-* Debe mantener respaldos incrementales cada 4 horas durante horario operativo.  
-* El tiempo de recuperación objetivo (RTO) debe ser menor a 4 horas.  
-* El punto de recuperación objetivo (RPO) debe ser menor a 1 hora (pérdida máxima de datos).
+Múltiples usuarios conectados simultáneamente.
 
-### **RNF-02.2: Continuidad del Servicio**
+Flujo Principal:
 
-* El sistema debe contar con plan de continuidad operativa documentado.  
-* Debe permitir operación en modo degradado ante fallas parciales, manteniendo funciones críticas activas.  
-* Debe notificar automáticamente al equipo técnico sobre fallas o anomalías del sistema.
+Varios usuarios acceden al sistema.
+El sistema gestiona las solicitudes concurrentes.
+El sistema mantiene el rendimiento estable.
 
----
+Criterios de Aceptación:
 
-## **RNF-03: SEGURIDAD**
+Soporta mínimo 5 usuarios sin degradación.
+Soporta 20 usuarios concurrentes en condiciones normales.
+Soporta picos de 50 usuarios simultáneos.
 
-### **RNF-03.0: Control de Acceso y Autenticación**
+Prioridad:
+MUST (Crítico)
 
-* El sistema debe implementar control de acceso basado en roles (RBAC) de manera estricta.  
-* Debe requerir autenticación segura mediante usuario y contraseña con políticas de complejidad configurables.  
-* Debe implementar bloqueo automático de cuenta después de 5 intentos fallidos de inicio de sesión.  
-* Debe forzar el cambio de contraseña cada 90 días.  
-* Debe mantener sesiones con timeout automático después de 30 minutos de inactividad.
+RNF-001.3: Escalabilidad
 
-### **RNF-03.1: Protección de Datos Sensibles**
+Descripción:
+El sistema debe poder escalar en capacidad y funcionalidad sin afectar su desempeño.
 
-* La información de proveedores, precios y condiciones comerciales debe estar protegida contra accesos no autorizados (clasificación: extremadamente crítica).  
-* Los datos financieros y de costos deben estar cifrados en tránsito (TLS 1.3) y en reposo (AES-256).  
-* El sistema debe cumplir con normativas de protección de datos personales aplicables en Colombia.  
-* Debe implementar enmascaramiento de datos sensibles en logs y auditoría.
+Actor:
+Sistema
 
-### **RNF-03.2: Auditoría y Trazabilidad de Seguridad**
+Precondiciones:
 
-* El sistema debe registrar todos los intentos de acceso (exitosos y fallidos).  
-* Debe mantener logs de auditoría inmutables por al menos 12 meses.  
-* Debe permitir la exportación de logs de seguridad para análisis forense.  
-* Debe alertar sobre actividades sospechosas o intentos de acceso no autorizados.
+Incremento en usuarios o volumen de datos.
 
----
+Flujo Principal:
 
-## **RNF-04: USABILIDAD**
+Aumenta la carga del sistema.
+Se incrementan recursos de infraestructura.
+El sistema mantiene su funcionamiento.
 
-### **RNF-04.0: Interfaz de Usuario**
+Criterios de Aceptación:
 
-* El sistema debe ser intuitivo y fácil de usar, considerando que algunos procesos actuales son informales y basados en experiencia.  
-* La interfaz debe seguir principios de diseño consistentes en todos los módulos.  
-* Debe requerir máximo 3 clics para acceder a funciones principales.  
-* Debe proporcionar retroalimentación visual inmediata sobre acciones del usuario.
+Escala hasta 200% de transacciones.
+Permite ampliar almacenamiento sin interrupciones.
+Soporta nuevos módulos sin afectar el rendimiento.
 
-### **RNF-04.1: Curva de Aprendizaje**
+Prioridad:
+SHOULD (Alta)
 
-* Los usuarios deben poder realizar tareas básicas después de máximo 2 horas de capacitación.  
-* El sistema debe incluir ayuda contextual y tooltips en funciones complejas.  
-* Debe proporcionar mensajes de error claros y orientados a la solución.  
-* Debe incluir manual de usuario y videos tutoriales integrados.
+RNF-002: DISPONIBILIDAD Y CONFIABILIDAD
+RNF-002.1: Alta Disponibilidad
 
-### **RNF-04.2: Accesibilidad**
+Descripción:
+El sistema debe estar disponible de forma continua para los usuarios.
 
-* El sistema debe ser accesible desde navegadores web modernos (Chrome, Firefox, Edge, Safari \- últimas 2 versiones).  
-* Debe ser responsive y adaptarse a diferentes tamaños de pantalla (escritorio, tablet).  
-* Debe soportar múltiples resoluciones de pantalla sin pérdida de funcionalidad.
+Actor:
+Sistema
 
----
+Precondiciones:
 
-## **RNF-05: INTEGRABILIDAD**
+Infraestructura operativa.
 
-### **RNF-05.0: Integración con Sistema Contable**
+Flujo Principal:
 
-* El sistema debe integrarse obligatoriamente con el sistema contable actual.  
-* La sincronización de datos debe realizarse en tiempo real o con latencia máxima de 5 minutos.  
-* Debe garantizar consistencia de datos financieros entre ambos sistemas mediante validaciones automáticas.  
-* Debe proporcionar mecanismos de reconciliación ante discrepancias.
+El sistema se encuentra en ejecución.
+Los usuarios acceden al sistema.
+El sistema responde sin interrupciones.
 
-### **RNF-05.1: Integración con Sistemas Externos**
+Criterios de Aceptación:
 
-* El sistema debe proporcionar APIs RESTful documentadas para integraciones futuras.  
-* Debe soportar formatos estándar de intercambio de datos (JSON, XML, CSV).  
-* Debe permitir integración con sistemas de producción mediante conectores configurables.
+Disponibilidad mínima del 99.5% mensual.
+Acceso continuo a la información.
+Recuperación automática ante fallos.
 
-### **RNF-05.2: Interoperabilidad**
+Prioridad:
+MUST (Crítico)
 
-* El sistema debe permitir exportación de datos en formatos estándar (Excel, PDF, CSV).  
-* Debe soportar importación masiva de datos mediante plantillas predefinidas.  
-* Debe proporcionar webhooks para notificaciones a sistemas externos.
+RNF-002.2: Respaldo y Recuperación
 
----
+Descripción:
+El sistema debe garantizar la recuperación de información ante fallos.
 
-## **RNF-06: MANTENIBILIDAD**
+Actor:
+Sistema
 
-### **RNF-06.0: Facilidad de Mantenimiento**
+Precondiciones:
 
-* El sistema debe permitir actualizaciones sin interrumpir el servicio (zero-downtime deployments).  
-* Las actualizaciones de seguridad críticas deben poder aplicarse en menos de 1 hora.  
-* El código debe estar documentado y seguir estándares de desarrollo establecidos.
+Datos almacenados.
 
-### **RNF-06.1: Monitoreo y Diagnóstico**
+Flujo Principal:
 
-* El sistema debe proporcionar herramientas de monitoreo de rendimiento en tiempo real.  
-* Debe generar alertas automáticas ante degradación de performance o errores críticos.  
-* Debe mantener logs detallados de errores y excepciones para diagnóstico.  
-* Debe proporcionar métricas de uso y estadísticas de operación.
+El sistema realiza respaldos automáticos.
+Ocurre una falla.
+El sistema ejecuta proceso de recuperación.
+Se restauran los datos.
 
-### **RNF-06.2: Soporte Técnico**
+Criterios de Aceptación:
 
-* El proveedor debe ofrecer soporte técnico en horario laboral (8x5) con tiempo de respuesta inicial menor a 4 horas.  
-* Para incidencias críticas, debe garantizar respuesta en menos de 1 hora.  
-* Debe proporcionar canal de comunicación directo (teléfono, chat, email).
+Backups diarios automáticos.
+Backups cada 4 horas.
+RTO menor a 4 horas.
+RPO menor a 1 hora.
 
----
+Prioridad:
+MUST (Crítico)
 
-## **RNF-07: PORTABILIDAD**
+RNF-002.3: Continuidad del Servicio
 
-### **RNF-07.0: Independencia de Plataforma**
+Descripción:
+El sistema debe continuar operando ante fallas parciales.
 
-* Fuerte preferencia por soluciones basadas en la nube (SaaS), siempre que cumplan con seguridad y ubicación de datos.  
-* El sistema debe ser accesible desde cualquier ubicación con conexión a internet.  
-* No debe requerir instalación de software cliente específico (excepto navegador web).
+Actor:
+Sistema
 
-### **RNF-07.1: Ubicación de Datos**
+Precondiciones:
 
-* Los datos deben almacenarse preferiblemente en datacenters ubicados en Colombia o Latinoamérica.  
-* Debe cumplir con normativas locales sobre residencia de datos.  
-* En caso de almacenamiento internacional, debe garantizar cumplimiento de transferencias internacionales de datos.
+Fallas parciales del sistema.
 
----
+Flujo Principal:
 
-## **RNF-08: EFICIENCIA Y OPTIMIZACIÓN**
+Se detecta una falla.
+El sistema activa modo degradado.
+Se mantienen funciones críticas.
+Se notifica al equipo técnico.
 
-### **RNF-08.0: Uso de Recursos**
+Criterios de Aceptación:
 
-* El sistema debe optimizar el uso de ancho de banda para operaciones remotas.  
-* Debe implementar caché inteligente para reducir consultas repetitivas a la base de datos.  
-* Debe minimizar el consumo de recursos del navegador cliente.
+Plan de continuidad definido.
+Operación en modo degradado.
+Notificación automática de fallas.
 
-### **RNF-08.1: Optimización de Procesos**
+Prioridad:
+SHOULD (Alta)
 
-* El sistema debe eliminar la dependencia de procesos manuales mediante automatización.  
-* Debe reducir el tiempo de procesamiento de órdenes de compra en al menos 50% vs proceso actual.  
-* Debe establecer una "única fuente de verdad" para datos maestros (productos, proveedores, inventario).
+RNF-003: SEGURIDAD
+RNF-003.1: Control de Acceso
 
----
+Descripción:
+El sistema debe controlar el acceso mediante autenticación y roles.
 
-## **RNF-09: CUMPLIMIENTO Y NORMATIVAS**
+Actor:
+Usuario / Sistema
 
-### **RNF-09.0: Cumplimiento Legal**
+Precondiciones:
 
-* El sistema debe cumplir con la normativa tributaria colombiana vigente.  
-* Debe permitir la generación de reportes requeridos por entidades regulatorias.  
-* Debe mantener trazabilidad de transacciones según requerimientos de auditoría externa.
+Usuario intenta acceder.
 
-### **RNF-09.1: Estándares de Calidad**
+Flujo Principal:
 
-* El sistema debe seguir mejores prácticas de desarrollo de software.  
-* Debe implementar controles de calidad de datos (validaciones, reglas de negocio).  
-* Debe mantener integridad referencial en todas las transacciones.
+Usuario ingresa credenciales.
+El sistema valida la información.
+El sistema permite o deniega acceso.
 
----
+Criterios de Aceptación:
 
-## **RNF-10: RESTRICCIONES Y LIMITACIONES**
+Implementación de roles (RBAC).
+Bloqueo tras 5 intentos fallidos.
+Cambio de contraseña cada 90 días.
+Timeout de 30 minutos.
 
-### **RNF-10.0: Restricciones Presupuestarias**
+Prioridad:
+MUST (Crítico)
 
-* No se cuenta con presupuesto ilimitado.  
-* La evaluación y aprobación de costos debe realizarse por orden trimestral.  
-* El modelo de costos debe ser predecible y escalable según uso.
+RNF-003.2: Protección de Datos
 
-### **RNF-10.1: Restricciones Técnicas**
+Descripción:
+El sistema debe proteger los datos sensibles.
 
-* El sistema debe integrarse con la infraestructura tecnológica existente.  
-* Debe considerar las limitaciones de conectividad de ubicaciones remotas.  
-* Debe funcionar adecuadamente con el ancho de banda disponible actualmente.
+Actor:
+Sistema
 
-### **RNF-10.2: Restricciones Organizacionales**
+Precondiciones:
 
-* La implementación debe minimizar la interrupción de operaciones actuales.  
-* Debe considerar la disponibilidad del personal para capacitación.  
-* El cambio tecnológico debe ser gradual y gestionado adecuadamente.
+Existencia de datos sensibles.
 
----
+Flujo Principal:
 
-## **RNF-11: DOCUMENTACIÓN**
+Los datos son transmitidos o almacenados.
+El sistema aplica cifrado.
+Se restringe acceso no autorizado.
 
-### **RNF-11.0: Documentación Técnica**
+Criterios de Aceptación:
 
-* El sistema debe incluir documentación técnica completa de arquitectura y APIs.  
-* Debe proporcionar documentación de configuración y administración.  
-* Debe mantener documentación actualizada ante cambios y actualizaciones.
+Cifrado con TLS 1.3 y AES-256.
+Cumplimiento normativo colombiano.
+Enmascaramiento de datos en logs.
 
-### **RNF-11.1: Documentación de Usuario**
+Prioridad:
+MUST (Crítico)
 
-* El sistema debe incluir manuales de usuario por rol.  
-* Debe proporcionar guías de procedimientos operativos estándar.  
-* Debe incluir FAQs y base de conocimiento consultable.
+RNF-003.3: Auditoría
 
----
+Descripción:
+El sistema debe registrar y monitorear actividades.
 
-## **RNF-12: CALIDAD DE DATOS**
+Actor:
+Sistema / Administrador
 
-### **RNF-12.0: Integridad de Datos**
+Precondiciones:
 
-* El sistema debe garantizar la consistencia de datos en tiempo real entre todos los módulos.  
-* Debe implementar validaciones estrictas en captura de datos para evitar errores.  
-* Debe prevenir la duplicación de registros mediante controles automatizados.
+Uso del sistema.
 
-### **RNF-12.1: Precisión y Confiabilidad**
+Flujo Principal:
 
-* El sistema debe mantener precisión del 99.9% en cálculos de inventario y costos.  
-* Debe detectar y alertar automáticamente sobre inconsistencias en datos.  
-* Debe proporcionar mecanismos de reconciliación periódica automática.
+Usuario realiza acciones.
+El sistema registra eventos.
+El administrador consulta logs.
+
+Criterios de Aceptación:
+
+Registro de accesos.
+Logs por 12 meses.
+Alertas de actividad sospechosa.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-004: USABILIDAD
+RNF-004.1: Interfaz de Usuario
+
+Descripción:
+El sistema debe ser intuitivo y fácil de usar.
+
+Actor:
+Usuario
+
+Precondiciones:
+
+Usuario accede al sistema.
+
+Flujo Principal:
+
+Usuario interactúa con la interfaz.
+El sistema responde visualmente.
+Usuario completa tareas.
+
+Criterios de Aceptación:
+
+Máximo 3 clics para funciones principales.
+Interfaz consistente.
+Retroalimentación inmediata.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-004.2: Curva de Aprendizaje
+
+Descripción:
+El sistema debe ser fácil de aprender.
+
+Actor:
+Usuario
+
+Precondiciones:
+
+Usuario nuevo.
+
+Flujo Principal:
+
+Usuario recibe capacitación.
+Usuario utiliza el sistema.
+Usuario ejecuta tareas básicas.
+
+Criterios de Aceptación:
+
+Uso básico en 2 horas.
+Ayuda contextual disponible.
+Mensajes claros.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-004.3: Accesibilidad
+
+Descripción:
+El sistema debe ser accesible desde múltiples dispositivos.
+
+Actor:
+Usuario
+
+Precondiciones:
+
+Uso de navegador web.
+
+Flujo Principal:
+
+Usuario accede desde un dispositivo.
+El sistema adapta la interfaz.
+Usuario navega sin inconvenientes.
+
+Criterios de Aceptación:
+
+Compatible con navegadores modernos.
+Diseño responsive.
+Soporte múltiples resoluciones.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-005: INTEGRABILIDAD
+RNF-005.1: Integración con Sistema Contable
+
+Descripción:
+El sistema debe integrarse con el sistema contable existente.
+
+Actor:
+Sistema
+
+Precondiciones:
+
+Sistema contable disponible.
+
+Flujo Principal:
+
+Se generan datos financieros.
+El sistema sincroniza la información.
+Se validan los datos.
+
+Criterios de Aceptación:
+
+Sincronización menor a 5 minutos.
+Consistencia de datos.
+
+Prioridad:
+MUST (Crítico)
+
+RNF-005.2: Integración con Sistemas Externos
+
+Descripción:
+El sistema debe permitir integración con otras plataformas.
+
+Actor:
+Sistema
+
+Precondiciones:
+
+Sistemas externos disponibles.
+
+Flujo Principal:
+
+Sistema externo realiza solicitud.
+El sistema procesa la petición.
+Retorna respuesta.
+
+Criterios de Aceptación:
+
+APIs REST documentadas.
+Soporte JSON, XML, CSV.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-006: MANTENIBILIDAD
+RNF-006.1: Mantenimiento del Sistema
+
+Descripción:
+El sistema debe permitir actualizaciones sin interrupciones.
+
+Actor:
+Equipo técnico
+
+Precondiciones:
+
+Necesidad de actualización.
+
+Flujo Principal:
+
+Se despliega la actualización.
+El sistema continúa funcionando.
+Se aplican cambios.
+
+Criterios de Aceptación:
+
+Zero-downtime.
+Actualizaciones críticas en menos de 1 hora.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-006.2: Monitoreo y Diagnóstico
+
+Descripción:
+El sistema debe permitir monitoreo continuo.
+
+Actor:
+Administrador
+
+Precondiciones:
+
+Sistema en ejecución.
+
+Flujo Principal:
+
+El sistema recolecta métricas.
+Detecta anomalías.
+Genera alertas.
+
+Criterios de Aceptación:
+
+Monitoreo en tiempo real.
+Alertas automáticas.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-007: PORTABILIDAD
+RNF-007.1: Acceso al Sistema
+
+Descripción:
+El sistema debe ser accesible desde cualquier ubicación.
+
+Actor:
+Usuario
+
+Precondiciones:
+
+Conexión a internet.
+
+Flujo Principal:
+
+Usuario accede desde navegador.
+El sistema carga la aplicación.
+Usuario interactúa con el sistema.
+
+Criterios de Aceptación:
+
+Acceso web sin instalación.
+Funcionamiento en la nube.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-008: EFICIENCIA
+RNF-008.1: Optimización del Sistema
+
+Descripción:
+El sistema debe optimizar el uso de recursos y procesos.
+
+Actor:
+Sistema
+
+Precondiciones:
+
+Sistema en operación.
+
+Flujo Principal:
+
+El sistema ejecuta procesos.
+Optimiza recursos.
+Reduce tiempos de ejecución.
+
+Criterios de Aceptación:
+
+Reducción de tiempos en al menos 50%.
+Uso eficiente de recursos.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-009: CUMPLIMIENTO
+RNF-009.1: Normativa Legal
+
+Descripción:
+El sistema debe cumplir la normativa colombiana vigente.
+
+Actor:
+Sistema
+
+Precondiciones:
+
+Operación dentro del territorio colombiano.
+
+Flujo Principal:
+
+Se generan datos del sistema.
+Se validan conforme a normativa.
+Se generan reportes regulatorios.
+
+Criterios de Aceptación:
+
+Cumplimiento tributario.
+Disponibilidad de reportes obligatorios.
+
+Prioridad:
+MUST (Crítico)
+
+RNF-010: RESTRICCIONES
+RNF-010.1: Restricciones del Sistema
+
+Descripción:
+El sistema debe adaptarse a limitaciones técnicas y organizacionales.
+
+Actor:
+Organización
+
+Precondiciones:
+
+Infraestructura existente.
+
+Flujo Principal:
+
+Se implementa el sistema.
+Se adapta a condiciones existentes.
+Opera dentro de las limitaciones.
+
+Criterios de Aceptación:
+
+Costos controlados.
+Funcionamiento con conectividad disponible.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-011: DOCUMENTACIÓN
+RNF-011.1: Documentación del Sistema
+
+Descripción:
+El sistema debe contar con documentación técnica y de usuario completa.
+
+Actor:
+Usuario / Técnico
+
+Precondiciones:
+
+Sistema implementado.
+
+Flujo Principal:
+
+Se genera documentación del sistema.
+Se actualiza ante cambios.
+Usuarios consultan la documentación.
+
+Criterios de Aceptación:
+
+Manuales disponibles.
+Documentación actualizada.
+Guías accesibles para usuarios y técnicos.
+
+Prioridad:
+SHOULD (Alta)
+
+RNF-012: CALIDAD DE DATOS
+RNF-012.1: Integridad y Precisión
+
+Descripción:
+El sistema debe garantizar la integridad y precisión de los datos.
+
+Actor:
+Sistema
+
+Precondiciones:
+
+Datos ingresados en el sistema.
+
+Flujo Principal:
+
+Se registran datos.
+El sistema valida la información.
+Se almacenan datos consistentes.
+
+Criterios de Aceptación:
+
+Precisión del 99.9%.
+Validaciones activas.
+Prevención de duplicados.
+
+Prioridad:
+MUST (Crítico)
 
